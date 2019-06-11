@@ -35,5 +35,12 @@
 ```
 ## Programos paleidimas
 * tereikia pasileisti CMakeLists.txt
-* arba komandinėje eilutėje įvykdyti komandą ``g++ -o programa main.cpp``
+* arba komandinėje eilutėje įvykdyti komandas:
+```
+g++ -o programa main.cpp
+./programa
+cd cmake-build-debug
+nano rez.txt
+```
+
   
