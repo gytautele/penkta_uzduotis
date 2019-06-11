@@ -56,6 +56,14 @@ void nuskaityti(ifstream &fd , map<string , size_t> &zodziu_sk , map<string , ma
 //---------------------------------------------------------------------------------
 void isvesti(ofstream &fr , map<string , size_t> &zodziu_sk , const map<string , map<size_t , size_t>> &references, map<string , size_t> &linkas) {
 
+    fr << "Url adresai:" <<endl;
+    for (auto &linka : linkas) {
+        fr<<"'" << linka.first << "' "<<" eiluteje : "<< linka.second<<std::endl;
+    }
+    fr << endl;
+
+    fr << "Zodziai ir ju daznis:" <<endl;
+
     for (auto &i : zodziu_sk) {
         if (i.second > 1){
             fr << " '"<< i.first <<"' " << "is viso pasikartojo " << i.second << " kartus:" << endl;
@@ -66,9 +74,7 @@ void isvesti(ofstream &fr , map<string , size_t> &zodziu_sk , const map<string ,
         }
     }
 
-    for (auto &linka : linkas) {
-        fr<<"'" << linka.first << "' "<<" eiluteje : "<< linka.second<<std::endl;
-    }
+
 }
 //--------------------------------------------------------------------------------
 int main() {
